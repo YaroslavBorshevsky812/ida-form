@@ -64,13 +64,20 @@ body {
     @include panel;
     cursor: pointer;
     padding: 10px 16px;
+    background-color: #fffefb;
     select {
       border: none;
+      background-color: #fffefb;
+      appearance: none;
+      &:focus {
+        outline: none;
+      }
     }
     &_main {
       cursor: pointer;
       font-size: 12px;
       color: #b4b4b4;
+      appearance: none;
     }
   }
   &_wrapper {
