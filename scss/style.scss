@@ -54,21 +54,21 @@ body {
   padding-right: 32px;
 }
 
+
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 32px;
+  align-items: flex-end;
   &_select {
     @include panel;
     cursor: pointer;
     padding: 10px 16px;
     background-color: #fffefb;
+    margin-bottom: 8px;
     select {
       border: none;
       background-color: #fffefb;
-      appearance: none;
       &:focus {
         outline: none;
       }
@@ -77,11 +77,15 @@ body {
       cursor: pointer;
       font-size: 12px;
       color: #b4b4b4;
-      appearance: none;
     }
   }
+}
+
+.title {
+  padding-top: 32px;
   &_wrapper {
-    margin-bottom: 25px;
+      
+      margin-bottom: 24px;
   }
 }
 
@@ -94,7 +98,6 @@ body {
   max-width: 332px;
   min-width: 332px;
   width: 100%;
-  min-height: 440px;
   margin-right: 8px;
   @include panel;
   &_wrapper {
@@ -104,19 +107,24 @@ body {
   &_item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    position: relative;
+    & + & { margin-top: 16px; }
     &_title {
       color: #49485e;
       font-size: 10px;
       font-weight: 400;
-      margin-bottom: 7px
+      margin-bottom: 4px
     }
     &_text {
       @include panel;
       font-size: 12px;
       font-weight: 400;
-      color: #b4b4b4;
       padding: 10px 16px;
+      line-height: 15px;
+      color: #3f3f3f;
+      &::placeholder {
+        color: #b4b4b4;
+      }
     }
     &_textarea {
       @include panel;
@@ -125,9 +133,16 @@ body {
       resize: none;
       font-size: 12px;
       font-weight: 400;
-      color: #b4b4b4;
+      color: #3f3f3f;
+      &::placeholder {
+        color: #b4b4b4;
+      }
     }
     &_error {
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      z-index: 1;
       transition: all .1s ease-in-out;
       margin-top: 0px;
       font-size: 0px;
@@ -146,6 +161,8 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    margin-top: 24px;
+    font-family: 'Inter', sans-serif;
     &:hover {
       color: #49485e;
       background-color: #e0dddd;
@@ -209,6 +226,11 @@ body {
   flex-direction: column;
   margin: 8px;
   cursor: pointer;
+  &_picture {
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 332 / 200;
+  }
   &_content {
     padding-left: 16px;
     padding-right: 16px;
@@ -244,6 +266,10 @@ body {
     background-color: #ff8484;
     transition: all .2s;
   }
+}
+
+.rub {
+  margin-left: 6px;
 }
 
 @media (max-width: 1439px) {

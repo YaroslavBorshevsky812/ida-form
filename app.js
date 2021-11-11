@@ -1,5 +1,5 @@
 const content = document.querySelector(".content")
-const headerWrapper = document.querySelector(".header_wrapper")
+const headerWrapper = document.querySelector(".title_wrapper")
 const headerWrapperHeight = headerWrapper.clientHeight
 
 const sidebarBtn = document.querySelector('.sidebar_btn')
