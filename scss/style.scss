@@ -183,7 +183,7 @@ body {
 }
 
 
-.sidebar_btn.clear {
+.sidebar_btn.green {
   background-color: #7bae73;
   color: #ffffff;
 }
@@ -230,6 +230,9 @@ body {
     width: 100%;
     max-height: 200px;
     aspect-ratio: 332 / 200;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
   &_content {
     padding-left: 16px;

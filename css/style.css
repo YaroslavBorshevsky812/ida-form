@@ -154,7 +154,7 @@ body {
 .sidebar_item.error .sidebar_item_text {
   border: 1px solid #ff8484; }
 
-.sidebar_btn.clear {
+.sidebar_btn.green {
   background-color: #7bae73;
   color: #ffffff; }
 
@@ -197,7 +197,10 @@ body {
   .card_picture {
     width: 100%;
     max-height: 200px;
-    aspect-ratio: 332 / 200; }
+    aspect-ratio: 332 / 200;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
   .card_content {
     padding-left: 16px;
     padding-right: 16px;
